@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1. *Entrada de Dados:*
+    - Pergunte ao candidato:
+        - *Nome* (string)
+        - *Idade* (número)
+        - *Pontuação na Prova Técnica* (0 a 10, número)
+        - *Pontuação na Entrevista* (0 a 10, número)
+2. *Critérios de Seleção:*
+    - *Idade Mínima:* O candidato deve ter no mínimo 18 anos.
+    - *Prova Técnica:* A pontuação mínima para aprovação é 7.
+    - *Entrevista:* A pontuação mínima para aprovação é 6.
+    - Para ser considerado *"Altamente Qualificado"*, o candidato deve ter uma média geral (Prova Técnica e Entrevista) igual ou superior a 8.
+3. *Saída:*
+    - Exiba uma mensagem personalizada:
+        - Se o candidato *não atender aos critérios de idade*, mostre: "Desculpe, [nome], você não atende aos critérios de idade."
+        - Se o candidato *não passar na Prova Técnica*, mostre: "Infelizmente, [nome], sua pontuação na Prova Técnica foi insuficiente."
+        - Se o candidato *não passar na Entrevista*, mostre: "Infelizmente, [nome], sua pontuação na Entrevista foi insuficiente."
+        - Se o candidato *passar em todos os critérios*, mostre:
+            - "Parabéns, [nome]! Você foi aprovado para a vaga."
+            - Adicione: "Você é Altamente Qualificado!" se a média geral for igual ou superior a 8.
+
+    <script>
+       
+// Solicita as informações do candidato
+let nome = prompt("Digite seu nome:");
+let idade = parseInt(prompt("Digite sua idade:"));
+let pontuacaoProvaTecnica = parseFloat(prompt("Digite sua pontuação na Prova Técnica (0 a 10):"));
+let pontuacaoEntrevista = parseFloat(prompt("Digite sua pontuação na Entrevista (0 a 10):"));
+
+// Verifica os critérios de seleção
+
+if (idade < 18) {
+    alert(Desculpe, ${nome}, você não atende aos critérios de idade.);
+} else if (pontuacaoProvaTecnica < 7) {
+    alert(Infelizmente, ${nome}, sua pontuação na Prova Técnica foi insuficiente.);
+} else if (pontuacaoEntrevista < 6) {
+    alert(Infelizmente, ${nome}, sua pontuação na Entrevista foi insuficiente.);
+} else {
+    // Calcula a média geral
+    let mediaGeral = (pontuacaoProvaTecnica + pontuacaoEntrevista) / 2;
+
+    // Mensagem de aprovação
+    alert(Parabéns, ${nome}! Você foi aprovado para a vaga.);
+    
+    // Verifica se o candidato é "Altamente Qualificado"
+    if (mediaGeral >= 8) {
+        alert("Você é Altamente Qualificado!");
+    }
+}
+
+
+
+    </script>
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    - Peça uma nota de 0 a 10 e informe a classificação do desempenho:
+    - Nota entre 0 e 4: "Ruim".
+    - Nota entre 5 e 7: "Bom".
+    - Nota entre 8 e 10: "Excelente".
+
+    <script>
+
+let nota = Number(prompt("Digite sua nota (0 a 10):"));
+
+if (nota >= 8 && nota <= 10) {
+    alert("Execelente");
+} else if (nota >= 5 && nota <= 7) {
+    alert("Bom");
+} else if (nota >= 0 && nota <= 4) {
+    alert("Ruim");
+}
+       
+    </script>
+</body>
+</html>
